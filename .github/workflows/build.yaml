@@ -13,3 +13,9 @@ jobs:
     steps:
       - name: Pull Code
         uses: actions/checkout@v4
+
+      - name: Build
+        run: docker build -t ghcr.io/KarlGong/qops-one-test-github-runner:latest .
+
+      - name: Push
+        run: docker push ghcr.io/KarlGong/qops-one-test-github-runner:latest
