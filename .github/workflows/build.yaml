@@ -1,0 +1,15 @@
+name: Build
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: '0 0 * * *'
+
+jobs:
+  build-and-push-image:
+    name: Build and Push Image
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Pull Code
+        uses: actions/checkout@v4
