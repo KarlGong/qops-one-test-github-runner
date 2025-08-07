@@ -6,3 +6,5 @@ RUN sudo curl -fsSL https://deb.nodesource.com/setup_22.x | sudo -E bash -
 RUN sudo apt-get install -y nodejs
 RUN sudo npm install -g pnpm
 RUN sudo npx playwright install --with-deps
+RUN sudo npx playwright install --with-deps chrome
+RUN sudo npx playwright install --with-deps msedge
