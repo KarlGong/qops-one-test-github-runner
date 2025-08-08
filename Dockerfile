@@ -6,8 +6,9 @@ RUN sudo curl -fsSL https://deb.nodesource.com/setup_22.x | sudo -E bash -
 RUN sudo apt-get install -y nodejs
 RUN sudo npm install -g pnpm
 RUN sudo npx playwright install --with-deps
-RUN sudo npx playwright install --with-deps chrome
-RUN sudo npx playwright install --with-deps msedge
+# RUN sudo npx playwright install --with-deps chrome
+# RUN sudo npx playwright install --with-deps msedge
 RUN sudo mkdir -p /home/runner/.cache/ms-playwright/
 RUN sudo find /root/.cache/ms-playwright/ -maxdepth 1 -type d -name "ffmpeg-*"
 RUN sudo find /root/.cache/ms-playwright/ -maxdepth 1 -type d -name "ffmpeg-*" -exec cp -a {} /home/runner/.cache/ms-playwright/ \;
+RUN sudo ls /home/runner/.cache/ms-playwright/
