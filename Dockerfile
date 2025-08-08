@@ -8,3 +8,4 @@ RUN sudo npm install -g pnpm
 RUN sudo npx playwright install --with-deps
 RUN sudo npx playwright install --with-deps chrome
 RUN sudo npx playwright install --with-deps msedge
+RUN sudo npx playwright install ffmpeg
