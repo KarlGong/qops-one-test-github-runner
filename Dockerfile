@@ -9,4 +9,4 @@ RUN sudo npx playwright install --with-deps
 RUN sudo npx playwright install --with-deps chrome
 RUN sudo npx playwright install --with-deps msedge
 RUN sudo mkdir -p /home/runner/.cache/ms-playwright/ 
-RUN sudo cp -rp /root/.cache/ms-playwright/ffmpeg-* /home/runner/.cache/ms-playwright/
+RUN sudo find /root/.cache/ms-playwright/ -maxdepth 1 -type d -name "ffmpeg-*" -exec cp -a {} /home/runner/.cache/ms-playwright/ \;
